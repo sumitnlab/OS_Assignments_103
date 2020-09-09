@@ -1,0 +1,204 @@
+Q1. Explore the following commands with various options, refer man pages for 
+    further help a) date b) cal c) bc d) echo e) who f) whoami g) logname g) uname h)
+    seq i) clear
+Ans=>  a) date : It will show the current date and Time of system.
+    b) cal :- It will show the calender.
+    c) bc :- bc is the basic calculator It will perform the arithmatic operation. 
+    d) echo :- It will display the text/output.
+    e) who :- It will display current log in user.
+    f) whoami :- It will display the username.
+    g) logname :- It will display the login username.
+    h) seq :- It used for generating sequence of number.
+    i) clear :- It will clear the screen.
+    
+
+
+Q2.	A) Create three directory a b and c and create a.txt,b.txt and c.txt
+		in each directory respectively and then copy c directory into the a.
+	B)Move Directory b to c.
+	C)Create alias of ls -lh command to your name.
+	D)Change Directory name a to cdac.
+Ans=>   A) mkdir a b c
+	cd a
+        touch a.txt
+	cd b
+        touch b.txt
+	cd c
+        cat > a.txt
+	hello there
+	cd
+	cp -r c a
+
+      B) mv b c
+
+      D) mv a cdac 
+	
+	
+      
+
+Q3. A) Create five files file1.txt , file2.txt ,file3.txt file4.txt and
+    file5.txt with some text inside it. Search for 's' character
+    inside all the files using grep command.
+    Also Use cat to view all file content together.
+	B)Create file.txt using cat and edit that using nano editor.
+	c)Create 5 empty files using touch command
+	D)Remove previously created directory a , b and c.
+
+Ans=>  A) touch file1 file2 file3 file4 file5
+        cat > f1
+		hello f1
+		cat > f2
+		hello f2
+		cat > f3
+		hello f3
+		cat > f4
+		hello f4
+		cat > f5
+		hello f5
+	
+	grep 's' file1 file2 file3 file4 file5
+      
+     B) cat > file.txt
+
+     C) touch f1 f2 f3 f4 f5
+
+     D) rm a b c
+
+Q4. Create a file with some content using vi editor
+	a) Display the file using cat command
+	b) Display line numbers along with content
+	c) Display the file in reverse order using tac
+	d) Combine multiple files using cat command
+
+Ans=>  a) cat filename
+  
+     b) 
+
+Q5. Create Random some files and sub directories.
+	a) display files row wise, column wise, 1 per row
+	b) sort the files in ascending, descending order
+	c) Create some hidden files and sub directories and display them using “ls -a”
+	d) Change time stamp of some files and directories using touch command and display the files using ls -t ls -rt
+	e) Recursive display contents of your home directory.
+	f) display all attributes of files and directories using ls -l
+	g) display attributes of a directory using ls -ld
+
+==================================================================================
+Q1. Create directory of your name and then create 4 files inside it named
+	a.txt, b.txt, c.txt and d.sh. And change the directory permission to
+	only user and also files permission to only user such that
+		a)user can read and write the file a.txt and b.txt
+		b)user can write the file c.txt
+		c)user can exectuable the file d.sh. Make
+			Contents of file d.sh:
+			#/bin/sh
+			ls -lh
+Q2. Change the permission of the previous directory to executable only.
+	Analyze the output.
+Q3. Change the permission of the previous directory to read only.
+	Analyze the output.
+Q4. Use echo to list the all files of your home directory.
+Q5. Use echo to list the all files of /etc/ directory
+Q6. Use echo to list the all files of /etc/ directory with extension name .conf
+Q7. Use echo to append your name to a.txt
+
+==================================================================================
+
+Note:Many operation might not work.Analyze them
+1.	Create Three level nested directory a,b and c
+a)Create at least one hidden file in each directory
+b)Create at least one normal text file in each directory
+c)Copy c into a
+d)Copy file inside a into b
+
+Ans  mkdir a
+     cd a
+     mkdir b
+     cd b
+     mkdir c
+     cd
+     cd a
+     touch .a1 a1.txt
+     cd b
+     touch .b1 b1.txt
+     cd c
+     touch .c1 c1.txt
+     cd
+     cp -r c a
+     cd -r a c
+     
+
+2.	Change the third level directory c permission to read only
+Ans=>    
+	chmod -w -x a1.txt
+
+3.	Try copying third level c directory to outside of a
+Ans=>     Permission Denied.
+
+4.	Create the directory  “data“ inside b
+Ans=>     cd b
+	mkdir data
+
+5.	Change the permission of b to read and write only
+Ans=>     chmod -x b
+
+6.	Create directory “data2”  inside b
+Ans=>     mkdir data2
+
+7.	Create data.txt file inside b
+Ans=>     touch data.txt
+
+8.	Rename the second level directory c to copied_dir
+Ans=>     mv -r c copied_dir
+
+9.	Change permission of copied_dir to only executable
+Ans=>     
+	chmod -r -w copied_dir
+
+
+10.	Try ls on copied_dir
+Ans=>     ls
+
+11.	Try moving copied_dir to outside of a
+ans=>permission denied for hidden file,data.txt file
+
+12.	Try moving data directory outside of a
+Ans=> mv a/b/data/ a
+
+13.	Now change the owner of the directory a to root
+sudo chmod
+
+14.	Change permission of a to read write and executable to only user
+Ans=>chmod o+rwx a
+
+15.	Try creating directory sample inside a
+Ans=>mkdir sample
+
+16.	Create directory x outside a
+Ans=> mkdir x
+
+
+17.	Try moving x inside a
+ Ans=>mv  x a
+
+18.	Create directory movies
+Ans=>mkdir movies
+
+19.	Change group of movies to sudo
+
+20.	Change group of movies to avahi
+
+21.	Try changing permission after changing ownership to root
+Ans=>chmod a=rwx a
+
+22.	Try Changing permission after changing group to sudo without sudo
+
+23.	Try Changing owner and group both to root
+
+24.	Try changinging permission
+
+25.	Try deleting the file
+Ans=>rm b.txt
+
+	
+	
