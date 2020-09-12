@@ -1,7 +1,7 @@
 Q1. Explore the following commands with various options, refer man pages for 
     further help a) date b) cal c) bc d) echo e) who f) whoami g) logname g) uname h)
     seq i) clear
-Ans=>  a) date : It will show the current date and Time of system.
+Ans  a) date : It will show the current date and Time of system.
     b) cal :- It will show the calender.
     c) bc :- bc is the basic calculator It will perform the arithmatic operation. 
     d) echo :- It will display the text/output.
@@ -18,7 +18,7 @@ Q2.	A) Create three directory a b and c and create a.txt,b.txt and c.txt
 	B)Move Directory b to c.
 	C)Create alias of ls -lh command to your name.
 	D)Change Directory name a to cdac.
-Ans=>   A) mkdir a b c
+Ans   A) mkdir a b c
 	cd a
         touch a.txt
 	cd b
@@ -30,6 +30,8 @@ Ans=>   A) mkdir a b c
 	cp -r c a
 
       B) mv b c
+   
+      C) alias sumeet = 'ls -lh'
 
       D) mv a cdac 
 	
@@ -44,17 +46,17 @@ Q3. A) Create five files file1.txt , file2.txt ,file3.txt file4.txt and
 	c)Create 5 empty files using touch command
 	D)Remove previously created directory a , b and c.
 
-Ans=>  A) touch file1 file2 file3 file4 file5
-        cat > f1
-		hello f1
-		cat > f2
-		hello f2
-		cat > f3
-		hello f3
-		cat > f4
-		hello f4
-		cat > f5
-		hello f5
+Ans  A) touch file1 file2 file3 file4 file5
+        cat > file1
+	hello f1
+	cat > file2
+	hello f2
+	cat > file3
+	hello f3
+	cat > file4
+	hello f4
+	cat > file5
+	hello f5
 	
 	grep 's' file1 file2 file3 file4 file5
       
@@ -70,9 +72,37 @@ Q4. Create a file with some content using vi editor
 	c) Display the file in reverse order using tac
 	d) Combine multiple files using cat command
 
-Ans=>  a) cat filename
+Ans  a) vi hello
+
+	cat hello
+	=> Hello world
   
-     b) 
+     b) cat -n hello
+
+	1  Hello world
+    	2  my name is sumeet
+	3  Nice to meet you
+
+     c) tac hello
+
+	Nice to meet you
+	my name is sumeet
+	Hello world
+
+     d) cat > f1.txt
+	hello world
+	
+	cat > f2.txt
+	hello India
+
+	cat > f3.txt
+	hello operating system
+
+	cat f1.txt f2.txt f3.txt > f4.txt
+
+	cat f4.txt
+
+
 
 Q5. Create Random some files and sub directories.
 	a) display files row wise, column wise, 1 per row
@@ -82,6 +112,33 @@ Q5. Create Random some files and sub directories.
 	e) Recursive display contents of your home directory.
 	f) display all attributes of files and directories using ls -l
 	g) display attributes of a directory using ls -ld
+
+Ans  a) cat f1.txt f2.txt f3.txt f4.txt 
+
+	column f1.txt f2.txt f3.txt f4.txt 
+
+     b) sort f1.txt
+  	
+	sort -r f1.txt
+
+     c) mkdir .x
+	
+	mkdir .y
+
+	cat > .hd.txt
+
+	ls -a
+
+      d)
+
+      e) ls -R
+ 
+      f) ls -l hd.txt
+
+         ls -l y
+
+      g) ls -ld y
+
 
 ==================================================================================
 Q1. Create directory of your name and then create 4 files inside it named
@@ -93,14 +150,54 @@ Q1. Create directory of your name and then create 4 files inside it named
 			Contents of file d.sh:
 			#/bin/sh
 			ls -lh
+
+Ans   mkdir sumeet
+
+      touch a.txt b.txt c.txt d.sh
+
+      a) chmod 600 a.txt b.txt
+
+      b) chmod 200 c.txt
+
+      c) chmod 100 d.sh
+
+      
 Q2. Change the permission of the previous directory to executable only.
 	Analyze the output.
+
+Ans   chmod 100 sumeet
+      => After this it says location could not be displayed it require permission and 
+           after entering admin password we can access the file
+
+
 Q3. Change the permission of the previous directory to read only.
 	Analyze the output.
+
+Ans  chmod 400 sumeet
+     => After this we can open the folder but we can not read the file inside it
+
+
 Q4. Use echo to list the all files of your home directory.
+
+Ans   echo *
+      file1.txt
+
 Q5. Use echo to list the all files of /etc/ directory
+
+Ans  echo *
+
+ 
 Q6. Use echo to list the all files of /etc/ directory with extension name .conf
+
+Ans  echo .conf *(It will display all the files whose extension is .conf)
+
+
 Q7. Use echo to append your name to a.txt
+
+Ans  echo "sumeet" > file1.txt
+
+     cat file1.txt
+	=> sumeet
 
 ==================================================================================
 
@@ -129,76 +226,82 @@ Ans  mkdir a
      
 
 2.	Change the third level directory c permission to read only
-Ans=>    
+ans    
 	chmod -w -x a1.txt
 
 3.	Try copying third level c directory to outside of a
-Ans=>     Permission Denied.
+ans     Permission Denied.
 
 4.	Create the directory  “data“ inside b
-Ans=>     cd b
+ans     cd b
 	mkdir data
 
 5.	Change the permission of b to read and write only
-Ans=>     chmod -x b
+ans     chmod -x b
 
 6.	Create directory “data2”  inside b
-Ans=>     mkdir data2
+ans     mkdir data2
 
 7.	Create data.txt file inside b
-Ans=>     touch data.txt
+ans     touch data.txt
 
 8.	Rename the second level directory c to copied_dir
-Ans=>     mv -r c copied_dir
+ans     mv -r c copied_dir
 
 9.	Change permission of copied_dir to only executable
-Ans=>     
+ans     
 	chmod -r -w copied_dir
 
 
 10.	Try ls on copied_dir
-Ans=>     ls
+ans     ls
+
 
 11.	Try moving copied_dir to outside of a
-ans=>permission denied for hidden file,data.txt file
+ans     permission denied for hidden file,data.txt file
+
 
 12.	Try moving data directory outside of a
-Ans=> mv a/b/data/ a
+ans	
 
 13.	Now change the owner of the directory a to root
-sudo chmod
+ans 	sudo chmod
+
 
 14.	Change permission of a to read write and executable to only user
-Ans=>chmod o+rwx a
+ans	chmod o+rwx a
+
 
 15.	Try creating directory sample inside a
-Ans=>mkdir sample
+ans	mkdir sample
 
 16.	Create directory x outside a
-Ans=> mkdir x
-
+ans	cd Desktop
+	mkdir x
 
 17.	Try moving x inside a
- Ans=>mv  x a
+ans	mv x a
 
 18.	Create directory movies
-Ans=>mkdir movies
+ans	mkdir movies
 
 19.	Change group of movies to sudo
+ans	chgrp sudo movies
 
 20.	Change group of movies to avahi
 
 21.	Try changing permission after changing ownership to root
-Ans=>chmod a=rwx a
+ans     chmod a=rwx a
 
 22.	Try Changing permission after changing group to sudo without sudo
 
 23.	Try Changing owner and group both to root
 
 24.	Try changinging permission
+ans	chmod 777 filename
 
 25.	Try deleting the file
-Ans=>rm b.txt
+ans	rm filename
 
 	
 	
